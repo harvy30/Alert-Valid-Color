@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>question 4</title>
+</head>
+
+<body>
+    <div id="div1" style="height:200px; width:200px"></div>
+    <input id="textField" type="text" name="">
+    <input id="button" type="button" value="Button" name="">
+    <script type="text/javascript">
+    var _id = function _id(id) {
+        return document['getElementById'](id);
+    }
+
+    var text = _id('textField');
+    var button = _id('button');
+    var div1 = _id('div1');
+
+    button['addEventListener']('click', function() {
+
+        if (text['value'] == "black") {
+            div1['style']['border'] = "3px solid black";
+        } else if (text['value'] == "red") {
+            div1['style']['border'] = "3px solid red";
+        } else {
+            alert("Please enter a valid color");
+        }
+
+
+    })
+    </script>
+</body>
+
+</html>
